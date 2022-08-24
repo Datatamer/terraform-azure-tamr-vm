@@ -73,5 +73,11 @@ resource "azurerm_virtual_machine" "tamr-vm" {
     }
   }
 
+  plan {
+    name      = var.image_sku
+    publisher = var.image_publisher
+    product   = var.image_offer
+  }
+
   tags = var.tags
 }
